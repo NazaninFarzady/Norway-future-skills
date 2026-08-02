@@ -1,1 +1,1 @@
-# norway-future-skills
+# Norway future skills
