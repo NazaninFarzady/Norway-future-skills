@@ -43,7 +43,7 @@ for job in jobs:
         "published": source.get("published"),
         "expires": source.get("expires"),
 
-        "city": city if city else "Unknown",
+        "city": city if city else "Missing location",
 
         "occupation": occupation if occupation else "Not classified",
 
