@@ -1,0 +1,377 @@
+skill,job_count
+Digitalisering,186
+IT,174
+ERP,110
+Elektronikk,101
+Dataanalyse,79
+Produktutvikling,79
+SAP,74
+Python,66
+Systemutvikling,66
+Programmering,59
+Informasjonssikkerhet,58
+AI,57
+IT-sikkerhet,45
+Systemutvikler,43
+Automatiker,42
+Programmerer,40
+Dataplattform,38
+Arkitektur,38
+Java,34
+DevOps,31
+BIM,30
+Maskinlæring,27
+GIS,25
+Hjelpemidler,25
+LIS,25
+C#,23
+Microsoft 365,23
+Tekniske tegninger,21
+Kundesupport,21
+.NET,21
+Datasenter,19
+Dokumentforvaltning,19
+SaaS,18
+Programvareutvikling,18
+Cybersikkerhet,17
+CNC,16
+CNC-operatør,15
+CAD,15
+Kybernetikk,15
+Digital kommunikasjon,13
+endringsledelse,12
+Digital sikkerhet,12
+Informatikk,11
+Systemarkitektur,11
+IT-arkitekt,11
+E-handel,10
+Chef,10
+Systemdesign,10
+digitalisering,10
+Datavarehus,10
+LIS3,10
+Robotikk,10
+controller,10
+UX-designer,10
+Geodata,9
+IT-prosjekt,9
+Skyplattform,8
+UX,8
+ETL,8
+Sky,8
+Kontrollsystemer,8
+ITIL,8
+Digitale løsninger,8
+Dataanalytiker,8
+Data governance,7
+Signalbehandling,7
+Systemarkitekt,7
+Data Engineer,7
+maskinlæring,7
+Telecom,7
+Webutvikling,7
+Matros,7
+IAM,7
+IT-tekniker,7
+TypeScript,6
+Datadrevne prosesser,6
+informasjonssikkerhet,6
+CT,6
+ServiceNow,6
+cybersikkerhet,6
+GDPR,6
+Produktspesialist,6
+Hendelseshåndtering,6
+programmering,6
+Softwareutvikling,5
+prosjektarbeid,5
+Dataprodukter,5
+elektronikk,5
+Serviceelektroniker,5
+Digital etterforskning,5
+dataanalyse,5
+Byggautomasjon,5
+Anleggsmekaniker,5
+Telekommunikasjonsmontør,5
+Grafisk designer,5
+Software Engineer,5
+Skyteknologi,5
+Scrum,5
+Kvantitativ analyse,5
+Masterdata,5
+R,5
+AI-utvikler,4
+CISO,4
+Callsenter,4
+Database,4
+Testleder,4
+hjelpemidler,4
+Fullstack utvikler,4
+Miljøforvaltning,4
+Innholdsforvaltning,4
+Produktdesign,4
+Produktdesigner,4
+Kroppsøving,4
+Kalibrering,4
+IT-prosjektleder,4
+Industriell programvare,4
+Grafisk design,4
+Hardware,4
+Softwarearkitekt,4
+Embedded,4
+Sanering,4
+Satellitt,4
+IT-ansvarlig,4
+SAS,4
+Forretningsanalytiker,4
+Digitale produkter,4
+interaksjonsdesign,4
+informatikk,4
+Business analyst,4
+C++,4
+Business Intelligence,4
+Datakriminalitet,3
+Data engineering,3
+Spesialingeniør,3
+Adobe Illustrator,3
+Algoritmeutvikling,3
+Adobe Creative Cloud,3
+Museumsarbeid,3
+NOC,3
+ISMS,3
+ISPS,3
+Programfag,3
+Formidler,3
+GCP,3
+Servicedesk,3
+Drone,3
+E-læring,3
+Angular,3
+IT-styring,3
+Informasjonsarkitektur,3
+Robot,3
+Digital design,3
+Databaseadministrator,3
+Typescript,3
+Business intelligence,3
+Vippetekniker,2
+CFD,2
+CNC-maskin,2
+Digital tjenesteutvikling,2
+Teknisk informasjon,2
+Systems Engineering,2
+Systemtenkning,2
+Svalbard,2
+Data science,2
+Digital identitet,2
+Applikasjonsutvikling,2
+Cyberkriminalitet,2
+Teleskoptruckfører,2
+data scientist,2
+dataplattform,2
+UI,2
+Trykkeri,2
+Softwareutvikler,2
+Verifikasjon,2
+data science,2
+antihvitvasking,2
+Arkivarbeid,2
+BI,2
+Bilberger,2
+CAM-programmering,2
+hardware,2
+digital design,2
+Visuell design,2
+Sikkerhetssystemer,2
+FPGA,2
+Datavitenskap,2
+Smidig,2
+GPS,2
+IKT-kunnskaper,2
+Software,2
+Geografisk informasjon,2
+SEM,2
+Hardware Security Engineer,2
+Helseinformatikk,2
+IKT-forvaltning,2
+IKT-ferdigheter,2
+PostgreSQL,2
+Microsoft Fabric,2
+Prosjektkonsulent,2
+IKT-sikkerhet,2
+KI-ingeniør,2
+PowerShell,2
+POS,2
+PDM,2
+Krypto,2
+Kretskort,2
+Microsoft Office,2
+Mobilutvikler,2
+Modellbasert prosjektering,2
+JavaScript,2
+Mekanisk industri,2
+Manikyrist,2
+Landmåling,2
+Materiellplanlegger,2
+LabVIEW,2
+Maskinarbeider,2
+Missilsystem,2
+LMS,2
+server,2
+Active Directory,2
+tekniker,2
+datasenter,2
+.net,1
+3D modellering,1
+3D-scanning,1
+Android utvikler,1
+Android,1
+Analytics,1
+Analyseplattform,1
+Algoritmer,1
+Agile,1
+Adobe Creative Suite,1
+devops,1
+datavitenskap,1
+AI Engineer,1
+teoretisk informatikk,1
+systemdesign,1
+support,1
+skyarkitekt,1
+sky,1
+museum,1
+mobilapplikasjon,1
+.Net,1
+Nettsidedesign,1
+NOARK,1
+Museumsvert,1
+Museumspedagog,1
+Museumsforvaltning,1
+Multicloud,1
+Modellkontroll,1
+Medieteknikk,1
+Maritime droner,1
+MSSQL,1
+M365-arkitekt,1
+Powershell,1
+Photoshop,1
+Penetrasjonstesting,1
+PLS programmering,1
+PLC,1
+PHP,1
+PCB-design,1
+IT-systemer,1
+Kvanteteknologi,1
+Kryptoforsering,1
+Kommunikasjonsplanlegging,1
+Kampplattform,1
+PC,1
+Oracle Identity Governance,1
+Områdearkitekt,1
+S/4HANA,1
+Robottekniker,1
+Robotprogrammering,1
+Robotics engineer,1
+Programvarestøtte,1
+IKT-system,1
+IKT-service,1
+Innholdsansvarlig,1
+Innebygde systemer,1
+Infrastrukturarkitekt,1
+Informasjonsutvikler,1
+Industrirobot,1
+Industrimekanikk,1
+Industriell controller,1
+Illustrator,1
+ServiceDesk,1
+Service Desk,1
+Senior softwareutvikler,1
+Senior Data Scientist,1
+Sem,1
+Scala,1
+Google Cloud Platform,1
+Geografiske informasjonssystemer,1
+IT porteføljestyring,1
+IT Security,1
+IT Operations,1
+ILS,1
+IKT-tekniker,1
+Elektrisk design,1
+IKT-infrastruktur,1
+Gravlund,1
+SAP konsulent,1
+Softwaredesign,1
+Software design,1
+Software Architect,1
+Site Engineer,1
+Sikkerhetsstandarder,1
+Digital samlingsdatabase,1
+Digital produksjon,1
+Fagveileder,1
+Elektronisk dokumentasjon,1
+Designstrategi,1
+E-ressurser,1
+Dokumentkontroller,1
+Direktebank,1
+Digitaltrykk,1
+Digitale systemer,1
+Sikkerhetsrammeverk,1
+Tele,1
+Stansemaskin,1
+Digital journalistikk,1
+Digital innhold,1
+Digital infrastruktur,1
+Digital handel,1
+Digital forretningsutvikling,1
+Digital designer,1
+Digital bevisanalyse,1
+Digital arkivering,1
+Datateknologi,1
+Datateknikk,1
+Datasystemer,1
+Datadrevet analyse,1
+Softwareingeniør,1
+Videojournalist,1
+Unity,1
+UML,1
+UI-designer,1
+Tjenesteutvikler,1
+Business analytics,1
+Data Engineering,1
+Data Center Technician,1
+DNS,1
+DCC,1
+Cybersecurity,1
+Cyberkrim,1
+Cyber security,1
+Cloud engineer,1
+Cloud Architect,1
+Cisco,1
+data engineering,1
+cloud engineer,1
+brukergrensesnitt,1
+backup,1
+algoritmer,1
+Apputvikler,1
+CNC-programmering,1
+CNC operatør,1
+CAM,1
+CAE,1
+AI utvikler,1
+AI konsulent,1
+Boremaskin,1
+Basisinfrastruktur,1
+BIM-rådgiver,1
+BIM-koordinator,1
+BI-utvikler,1
+Videoteknologi,1
+ABAP,1
+influencer marketing,1
+iOS,1
+hjelpemiddeltekniker,1
+helseinformatikk,1
+fresemaskin,1
+formelle metoder,1
+vitenskapelig databehandling,1
+innholdsstrategi,1
+AI Governance,1

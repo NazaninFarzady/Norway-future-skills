@@ -1,0 +1,9 @@
+skill,job_frequency,esco_uri,esco_label,esco_language,is_digital_esco,retrieval_score,rerank_score,rerank_margin,match_method,ai_esco_label
+Maskinlæring,27,http://data.europa.eu/esco/skill/3a2d5b45-56e4-4f5a-a55a-4a4a65afdc43,maskinlæring,no,True,,1.0,,exact,machine learning
+maskinlæring,7,http://data.europa.eu/esco/skill/3a2d5b45-56e4-4f5a-a55a-4a4a65afdc43,maskinlæring,no,True,,1.0,,exact,machine learning
+AI,57,http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2,prinsipper for kunstig intelligens,no,True,0.5584366917610168,0.99960857629776,0.001320481300354004,digital_consensus,principles of artificial intelligence
+AI Engineer,1,http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2,prinsipper for kunstig intelligens,no,True,0.624720573425293,0.9044782519340515,0.06515902280807495,digital_consensus,principles of artificial intelligence
+AI Governance,1,http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2,prinsipper for kunstig intelligens,no,True,0.5793181657791138,0.9866042137145996,0.00828021764755249,digital_consensus,principles of artificial intelligence
+AI konsulent,1,http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2,prinsipper for kunstig intelligens,no,True,0.5411095023155212,0.9970965385437012,0.05164909362792969,digital_consensus,principles of artificial intelligence
+AI utvikler,1,http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2,prinsipper for kunstig intelligens,no,True,0.5482016205787659,0.9020602107048035,0.7552273720502853,digital_consensus,principles of artificial intelligence
+AI-utvikler,4,http://data.europa.eu/esco/skill/e465a154-93f7-4973-9ce1-31659fe16dd2,prinsipper for kunstig intelligens,no,True,0.597407341003418,0.9969987869262695,0.019451379776000977,digital_consensus,principles of artificial intelligence
