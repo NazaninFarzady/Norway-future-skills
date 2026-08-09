@@ -10,3 +10,6 @@ __pycache__/
 
 #data files
 data/raw/
+
+# Local archive
+archiv/

@@ -1,44 +1,160 @@
-import requests
 import json
 import time
+from pathlib import Path
 
-API_URL = "https://arbeidsplassen.nav.no/stillinger/api/search"
+import requests
+
+
+API_URL = (
+    "https://arbeidsplassen.nav.no/"
+    "stillinger/api/search"
+)
+
+OUTPUT_FILE = Path(
+    "data/raw/all_jobs.json"
+)
+
+BATCH_SIZE = 100
+MAX_JOBS = 10_000
+REQUEST_DELAY = 0.5
+TIMEOUT = 30
+
+
+# ---------------------------------------------------------
+# Collect job postings
+# ---------------------------------------------------------
 
 all_jobs = []
+seen_job_ids = set()
 
 start = 0
-batch_size = 100
 
-while True:
+
+while len(all_jobs) < MAX_JOBS:
+
     params = {
         "from": start,
-        "size": batch_size
+        "size": BATCH_SIZE
     }
 
-    response = requests.get(API_URL, params=params)
-    data = response.json()
+    try:
+        response = requests.get(
+            API_URL,
+            params=params,
+            timeout=TIMEOUT
+        )
 
-    if "hits" not in data:
-        print("No more jobs or unexpected response:")
-        print(data)
+        response.raise_for_status()
+
+        data = response.json()
+
+    except requests.RequestException as error:
+        print(
+            "Request failed:",
+            error
+        )
         break
 
-    jobs = data["hits"]["hits"]
-
-    if not jobs:
+    except ValueError:
+        print(
+            "Response was not valid JSON."
+        )
         break
 
-    all_jobs.extend(jobs)
 
-    print(f"Downloaded {len(all_jobs)} jobs")
+    hits = (
+        data
+        .get("hits", {})
+        .get("hits", [])
+    )
 
-    start += batch_size
 
-    time.sleep(0.5)
+    if not hits:
+        print(
+            "No more jobs found."
+        )
+        break
 
 
-with open("data/raw/all_jobs.json", "w", encoding="utf-8") as file:
-    json.dump(all_jobs, file, ensure_ascii=False, indent=2)
+    # Avoid accidental duplicate postings
+    for job in hits:
 
-print("Finished!")
-print("Total jobs saved:", len(all_jobs))
+        source = job.get(
+            "_source",
+            {}
+        )
+
+        job_id = source.get(
+            "uuid"
+        )
+
+        if (
+            job_id
+            and job_id in seen_job_ids
+        ):
+            continue
+
+        if job_id:
+            seen_job_ids.add(
+                job_id
+            )
+
+        all_jobs.append(
+            job
+        )
+
+        if (
+            len(all_jobs)
+            >= MAX_JOBS
+        ):
+            break
+
+
+    print(
+        f"Downloaded "
+        f"{len(all_jobs):,} jobs"
+    )
+
+
+    start += BATCH_SIZE
+
+    time.sleep(
+        REQUEST_DELAY
+    )
+
+
+# ---------------------------------------------------------
+# Save raw data
+# ---------------------------------------------------------
+
+OUTPUT_FILE.parent.mkdir(
+    parents=True,
+    exist_ok=True
+)
+
+with OUTPUT_FILE.open(
+    "w",
+    encoding="utf-8"
+) as file:
+
+    json.dump(
+        all_jobs,
+        file,
+        ensure_ascii=False,
+        indent=2
+    )
+
+
+print(
+    "\\nCollection completed."
+)
+
+print(
+    "Total jobs saved:",
+    f"{len(all_jobs):,}"
+)
+
+print(
+    "Output file:",
+    OUTPUT_FILE
+)

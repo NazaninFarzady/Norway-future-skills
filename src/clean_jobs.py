@@ -1,40 +1,87 @@
 import json
+from pathlib import Path
+
 import pandas as pd
 
 
-INPUT_FILE = "data/raw/all_jobs.json"
-OUTPUT_FILE = "data/processed/jobs_clean.csv"
+INPUT_FILE = Path("data/raw/all_jobs.json")
+OUTPUT_FILE = Path("data/processed/jobs_clean.csv")
 
 
-with open(INPUT_FILE, "r", encoding="utf-8") as file:
+# ---------------------------------------------------------
+# Load raw job postings
+# ---------------------------------------------------------
+
+with INPUT_FILE.open(
+    "r",
+    encoding="utf-8"
+) as file:
     jobs = json.load(file)
 
+
+# ---------------------------------------------------------
+# Helper functions
+# ---------------------------------------------------------
+
+def first_city(source):
+    locations = source.get("locationList") or []
+
+    for location in locations:
+        city = location.get("city")
+
+        if city:
+            return city.strip()
+
+    return None
+
+
+def join_names(items):
+    items = items or []
+
+    names = [
+        item.get("name", "").strip()
+        for item in items
+        if item.get("name", "").strip()
+    ]
+
+    return ", ".join(names)
+
+
+def join_skills(source):
+    properties = source.get("properties") or {}
+
+    skills = properties.get("searchtagsai") or []
+
+    skills = [
+        str(skill).strip()
+        for skill in skills
+        if str(skill).strip()
+    ]
+
+    return ", ".join(skills)
+
+
+# ---------------------------------------------------------
+# Clean jobs
+# ---------------------------------------------------------
 
 clean_jobs = []
 
 for job in jobs:
-    source = job["_source"]
 
-    city = source.get("locationList", [{}])[0].get("city")
+    source = job.get("_source", {})
 
-    occupation = ", ".join(
-        [
-            item.get("name", "")
-            for item in source.get("occupationList", [])
-        ]
+    city = first_city(source)
+
+    occupation = join_names(
+        source.get("occupationList")
     )
 
-    category = ", ".join(
-        [
-            item.get("name", "")
-            for item in source.get("categoryList", [])
-        ]
+    category = join_names(
+        source.get("categoryList")
     )
 
-    skills = ", ".join(
-        source.get("properties", {}).get("searchtagsai", [])
-    )
-
+    skills = join_skills(source)
 
     clean_jobs.append({
         "job_id": source.get("uuid"),
@@ -43,13 +90,25 @@ for job in jobs:
         "published": source.get("published"),
         "expires": source.get("expires"),
 
-        "city": city if city else "Missing location",
+        "city":
+            city
+            if city
+            else "Missing location",
 
-        "occupation": occupation if occupation else "Not classified",
+        "occupation":
+            occupation
+            if occupation
+            else "Not classified",
 
-        "category": category if category else "Not classified",
+        "category":
+            category
+            if category
+            else "Not classified",
 
-        "skills": skills if skills else "No skills listed",
+        "skills":
+            skills
+            if skills
+            else "No skills listed",
 
         "has_city": bool(city),
         "has_occupation": bool(occupation),
@@ -57,7 +116,16 @@ for job in jobs:
     })
 
 
+# ---------------------------------------------------------
+# Save cleaned dataset
+# ---------------------------------------------------------
+
 df = pd.DataFrame(clean_jobs)
+
+OUTPUT_FILE.parent.mkdir(
+    parents=True,
+    exist_ok=True
+)
 
 df.to_csv(
     OUTPUT_FILE,
